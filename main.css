@@ -66,6 +66,19 @@ body
   background:#000000;
 }
 
+.article.positive h2
+{
+  color:#cfea2b;
+}
+.article.negative h2
+{
+  color:#fd5308;
+}
+.article.neutral h2
+{
+  color:#adadad;
+}
+
 .article h3
 {
   margin-top: 15px;
@@ -118,13 +131,11 @@ body
 
 .blogPositive
 {
-  border-top:1px solid #1a1a1a;
   background-color:#cfea2b;
 }
 
 .blogNegative
 {
-  border-top:1px solid #1a1a1a;
   background-color:#fd5308;
 }
 
