@@ -1,0 +1,231 @@
+/*
+	Justin Alexander Ratcliffe
+*/
+
+*{
+	margin:0;
+	padding:0;
+}
+
+/*-- BEGIN General Rules --*/
+body
+{
+  width: 867px; /*(width of container + 15px gutter) + (width of nav images + 2*1px margin) = width of body*/
+/*  margin: 0 auto; this will make it float in the center...making it look a little weird and screws up w/scroll absent/present*/
+  margin: 0 0 0 15px;
+	font-size: 62.5%; /*  Sets 1em to 10px */
+	font-family: "Helvetica Neue", Helvetica, "Frutiger", "Univers" Arial, Verdana, sans-serif;
+	line-height:1.8em;
+	border:1px solid;
+}
+
+.header h3
+{
+  color: #ffffff;
+}
+
+.container
+{
+  float: right; /*containers floats on the right of the body and nav on left*/
+  width: 705px;/*----------------------------------change 705*/
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+/*
+  min-height dependant upon .conatiner's
+*/
+.content
+{
+  width: 900px;/*-----------------------------------------------705*/
+/*min-height: 600px;*/
+}
+
+.header
+{
+  height: 65px;
+  width: 900px;
+  background: #0c1440;
+  background-repeat: no-repeat;
+  margin: 15px 0;
+}
+
+.article
+{
+  width:225px;
+  height:350px;
+  border:1px solid;
+  float:left;
+  margin-right:10px;
+}
+
+.article h2
+{
+  width:225px;
+  color:#ffffff;
+  background:#000000;
+}
+
+.article h3
+{
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+.article h4
+{
+  margin:15px 0 0 5px;
+  font-size: 1.2em;
+  display: inline;
+  font-weight:normal;
+}
+
+.article p
+{
+  font-size:1.4em;
+  font-family:"Times";
+}
+
+/*used for related article links*/
+.article a
+{
+  font-size:1.3em;
+}
+
+.article ul
+{
+  list-style: none;
+  font-size:1.3em;
+  margin:0 0 15px 5px;
+}
+
+/*.article li:first-child
+{
+  font-weight:bold;
+}*/
+
+.article li
+{
+  display:inline;
+  margin-right:10px;
+  color:#3b4fbf;
+}
+
+.article li span
+{
+  color:#272c8c;
+}
+
+.blogPositive
+{
+  border-top:1px solid #1a1a1a;
+  background-color:#cfea2b;
+}
+
+.blogNegative
+{
+  border-top:1px solid #1a1a1a;
+  background-color:#fd5308;
+}
+
+.blogNeutral
+{
+  background-color:#adadad;
+}
+
+
+
+
+
+
+/*
+p
+{
+  color: #000000;
+  font-size: 1.3em;
+  line-height: 1.25em;
+  margin: 0 0 12px 0;
+}
+
+p span
+{
+  font-weight: bold;
+}
+
+a
+{
+  color: #000000;
+  font-weight:bold;
+  text-decoration: none;
+  background-color: transparent;
+}
+*/
+
+
+
+
+
+/*
+.header:hover
+{
+  background-image: url(img/title_hover.png);
+}
+
+.footer
+{
+  height: 30px;
+  width: 705px;
+  background: #000000;
+  clear: both;
+}
+
+
+.column
+{
+  float: left;
+  width: 225px;
+}
+
+.column:first-child
+{
+  float: left;
+  width: 225px;
+  margin: 0 15px 0 0;
+}
+
+.column:last-child
+{
+  float: left;
+  width: 225px;
+  margin: 0 0 0 15px;
+}
+
+#portfolioList li
+{
+  list-style: none;
+	display: inline;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+#portfolioList li a img
+{
+  height: 65px;
+  width: 65px;
+  border: none;
+}
+
+#portfolioList li:last-child
+{
+  margin: 0;
+}
+
+a img
+{
+  margin: 0;
+  border: none;
+}
+
+
+
+*/
