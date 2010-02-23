@@ -1,14 +1,40 @@
 BLOG
 ------------------------------------------------------------------------------
-TITLE
-AUTHOR
+Economists’ Views on Interest Rates, Housing Bubble
+WSJ Staff (WSJ)
 DATE
 DESCRIPTION
 ------------------------------------------------------------------------------
 
 ARTICLE
 ------------------------------------------------------------------------------
-LINK
+http://blogs.wsj.com/economics/2010/01/12/economists-views-on-interest-rates-housing-bubble/tab/article/
 
-TEXT
+The Wall Street Journal surveyed economists who are part of the National Bureau of Economic Research’s Monetary Policy Program and asked them whether low interest rates caused the housing bubble. Here is a sampling of their responses, which represents their views and not the NBER:
+
+LAURENCE BALL, JOHNS HOPKINS PROFESSOR: “If only mortgage lenders had insisted on documentation of income, we might not be having this whole discussion.”
+
+MICHAEL BORDO, RUTGERS PROFESSOR: “The Fed didn’t cause the house price boom per se. Its causes were varied including government policy to encourage home ownership going back to the 1930s but especially the CRA (Community Reinvestment Act), lax regulation, inappropriate business practices etc. But loose monetary policy provided much of the fuel.” 
+
+BRAD DELONG, BERKELEY PROFESSOR: “If you believe that the Fed kept the fed funds rate 2% below its proper Taylor-rule value for 3 years, that has a 6% impact on the price of a long-duration asset like housing. Even with a lot of positive-feedback trading built in, that’s not enough to create a big bubble. And it wasn’t the bubble’s collapse that caused the current depression–2000-2001 saw a bigger bubble collapse, and no depression.”
+
+BENJAMIN FRIEDMAN, HARVARD PROFESSOR: “A democracy gets the regulatory policy it chooses.  If the public elects office holders who do not believe in regulation, and those office holders appoint people to head the regulatory agencies who also do not believe in regulation, then there will be no regulation no matter what the statutes say.”
+
+MARK GERTLER, NEW YORK UNIVERSITY PROFESSOR: “If we could go back in history and make one policy change, I’d go after sub-prime lending. Absent non-prime lending, the likely outcome of the housing correction of 2007 would have been a mild recession like 2000-2001, and not the debacle we experienced.”
+
+MARVIN GOODFRIEND, CARNEGIE MELLON UNIVERSITY PROFESSOR: “Interest rate policy was appropriately stimulative in the 2002-3 period. But rates should have been raised less mechanically and more aggressively in 2004-5 on grounds of the usual macroeconomic conditions. The appreciation of house prices was but one of many indicators which called for a somewhat more restrictive interest rate policy at the time. A somewhat tighter stance of interest rate policy then could have cut off the last year or so of the house price appreciation and prevented the worst part of the subsequent adjustment.”
+
+CHRISTOPHER HOUSE, UNIVERSITY OF MICHIGAN PROFESSOR: “While the interest rate was below normal for some time it may not have been far below normal.  In the wake of the 2001 recession, inflation was low (it was below 2 percent for much of 2001 – 2003) and the economy lost jobs for more than two years (job losses continued until roughly August 2003) so it is not unreasonable for the Fed to have kept interest rates low.  The low interest rate likely contributed to the housing boom somewhat but it is unlikely that it was the main cause of the crisis.”
+
+KENNETH KUTTNER, WILLIAMS COLLEGE PROFESSOR: “The ‘bubble’ didn’t really get going until 05-06, by which time the Fed had raised rates to more or less normal levels.”
+
+JEFFREY MIRON, HARVARD PROFESSOR: “The more fundamental way in which the Fed contributed to the bubble was via the “Greenspan put,” namely, the assurances the Fed gave markets that, whatever might happen, the Fed had both the ability and the willingness to clean the mess up afterwards, without too much pain. This stance played a major role in Wall Street’s excessive risk-taking.
+
+JONATHAN PARKER, NORTHWESTERN PROFESSOR: “The Fed did not have the legal authority to change or enforce regulations in most of the areas where these actions could have mitigated the crisis – if the Fed did have such authority or ability, or if any agency did, we could now get by merely by tweaking the system.”
+
+GARY RICHARDSON, UNIVERSITY OF CALIFORNIA IRVINE PROFESSOR: “The connection between low rates and the housing bubble was indirect. Low rates encouraged homeowners to refinance mortgages. To handle this wave of refinancing, financial institutions expanded capacity to write mortgages (roughly doubling employment in the mortgage-writing industry). After the refinancing wave passed, financial institutions kept the expanded mortgage-making resources in use by finding new ways to extend mortgages, which led to the creation of exotic mortgages and the extension of loans to hitherto unqualified buyers.”
+
+CHRIS SIMS, PRINCETON PROFESSOR: “There may not have been a great deal that the Fed itself, without legislative cooperation, could have done about the situation as the housing bubble developed … In the atmosphere of those boom years, anyone who favored increased regulation and damping of the flows of commissions and bonuses that were driving the boom had difficulty making an impact.”
+
+JON STEINSSON, COLUMBIA PROFESSOR: “Excessively easy monetary policy by the Fed played at most a minor role in causing the housing bubble. Those that think that excessively easy monetary policy by the Fed played a major role must think that the Fed can have a major influence on real interest rates for a very sustained period of time. It is not clear to me that this is true.”
 ------------------------------------------------------------------------------

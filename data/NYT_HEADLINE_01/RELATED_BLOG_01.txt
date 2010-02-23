@@ -1,14 +1,54 @@
 BLOG
 ------------------------------------------------------------------------------
-TITLE
-AUTHOR
+Clearing Up Confusion on Google and China
+Sky Canave (WSJ)
 DATE
 DESCRIPTION
 ------------------------------------------------------------------------------
 
 ARTICLE
 ------------------------------------------------------------------------------
-LINK
+http://blogs.wsj.com/digits/2010/01/18/clearing-up-confusion-on-google-and-china/tab/article/
 
-TEXT
+From Silicon Valley to Zhongguancun, Google’s surprise announcement that it may pull out of China has fueled an enormous amount of discussion in recent days, not all of it 100% accurate. Below are some misstatements and misunderstandings we’ve seen:
+
+1. Google failed in China
+
+Google’s China operations contribute a small fraction of the company’s overall revenue – the company doesn’t disclose the amount, but analysts estimate it was a few percent of its total $21.8 billion in 2008 revenue, or several hundred million dollars. But Google has made significant progress in China in recent years, raising its share of the Internet search market to roughly 36% in the fourth quarter of 2009 from 13% when it started its Chinese-language google.cn site in early 2006, according to data from research firm Analysys International.
+
+Many other foreign companies doing business in China would gladly forgo big profits in the short term for comparable market-share growth in China—especially in an industry where China has more users than any other country (384 million according to the latest statistics). Google has also been particularly popular among the highly sought-after demographic of young, educated, white-collar urban professionals. The company’s powerful brand of business and ethics (“don’t be evil) has also earned it a fair amount of good will among Chinese Internet users, many of whom are now mourning its (still uncertain) fate. While rival Baidu still has a much larger 58% share of the search market, its brand has suffered as a result of scandals involving paid results and allegations of censorship of sensitive news stories.
+
+Google doesn’t say if it’s profitable in China, but there’s certainly no reason to assume it’s not. Baidu, its chief rival, reported net profit of about $153 million on revenue of $468 million for 2008, when it said it had 6,387 employees. Google’s revenue would have perhaps half or two thirds that amount, but it likely has a much lower cost base in China than Baidu, since Google is believed to employ well under 1,000 employees in the country, and can use technology developed by its U.S. headquarters.
+
+2. Google.com is not accessible in China
+
+Before Google introduced its China-specific search engine, Google.cn, in 2006, its global site Google.com was subject to periodic blocking in China. But for the last four years, Google.com has been almost always accessible to users in China.
+
+However, the fact that Google.com can be accessed from China doesn’t mean that Internet users can get to forbidden content listed in the site’s search results. Links to sites that are blocked in China will still return error messages or time out when they are clicked. (In contrast, Google’s Chinese search engine, Google.cn, will filter out links to sites that don’t comply with Chinese laws and regulations.)
+
+And of course, given the unpredictability of China’s Web restrictions, there’s no guarantee that Google.com will continue to be available to users inside China, at least not without “scaling the wall.”
+
+3. Google has Gmail servers in China
+
+Some reports have said that the reason Chinese hackers were able to access Gmail accounts is that Google has email servers physically located in China. This is not the case. Google says it has no email servers in the country.
+
+Indeed, Google has said keeping its servers out of China was a deliberate move to help protect user information. When the company announced its plans to launch google.cn in January 2006, executives said one of the safeguards it planned to use to protect user interests was that it wouldn’t host user-generated content like email and blogs on servers in China.
+
+Google had reason to be careful. In 2005, there was widespread outcry among rights activists and the U.S. government after Yahoo turned over user information to the Chinese government, which was used as evidence to sentence journalist Shi Tao to 10 years in prison. Yahoo said that, because its Chinese mail servers were inside China, the company felt compelled to comply with the authorities’ request.
+
+4. Google.cn search results are already uncensored
+
+After Tuesday’s announcement, Web users ran amok on Google.cn, looking up sensitive terms such as “Tiananmen 1989,” “tank man,” and even “sensitive words.” But many have been disappointed with the results, as searches for these terms still turned up the familiar disclaimer that “in accordance with local laws and regulations, a portion of the search results are not displayed.”
+
+Google says that it hasn’t yet started to remove content filters on Google.cn, a process that could take weeks.
+
+How to explain the images of tank man and links to sites about the Dalai Lama found via Google.cn? Many of the searches yielding fruitful results appear to have been conducted in English, a trick that often turns up fuller results on Google.cn than a search for the same term in Chinese. (To see what we mean, compare these Google.cn results for “Dalai Lama” in English and Chinese).
+
+5. Google has identified Chinese dissidents as the targets of cyber attacks
+
+Since Google revealed that it has been the target of cyber attacks, and that it had identified two Gmail accounts that had been compromised, a number of prominent Chinese activists have reported that their Gmail accounts have been hacked, in some cases repeatedly. Google says that these intrusions were not part of the larger, sophisticated attack on its security infrastructure, but likely the result of more pedestrian phishing scams or malware.
+
+6. Google has already shut down its business in China
+
+On Friday, Ministry of Commerce spokesman Yao Jian said that neither MOC nor the Beijing Municipal Commission of Commerce had received any information from Google about a planned withdrawal of its investment. A person close to Google also denied rumors that Google employees in China have ceased to report for work.
 ------------------------------------------------------------------------------
