@@ -51,7 +51,7 @@ body
 .article
 {
   width:225px;
-  height:350px;
+  height:400px;
   border:1px solid;
   float:left;
   margin-right:10px;
@@ -59,18 +59,20 @@ body
 
 .article h2
 {
-  width:225px;
+  width:220px;
   color:#ffffff;
-  background:#000000;
+  padding-left:5px;
 }
 
 .article.positive h2
 {
-  color:#cfea2b;
+/*  color:#cfea2b;*/
+  background:#608913;
 }
 .article.negative h2
 {
-  color:#fd5308;
+/*  color:#fd5308;*/
+  background:#DB1818;
 }
 .article.neutral h2
 {
@@ -81,6 +83,7 @@ body
 {
   margin-top: 15px;
   font-size: 1.3em;
+  padding-left:10px;
 }
 
 .article h4
@@ -95,19 +98,22 @@ body
 {
   font-size:1.4em;
   font-family:"Times";
+  padding:5px 10px 0 10px;
 }
 
 /*used for related article links*/
 .article a
 {
   font-size:1.3em;
+  padding:15px;
 }
 
 .article ul
 {
   list-style: none;
   font-size:1.3em;
-  margin:0 0 15px 5px;
+  margin:0 0 15px 15px;
+  
 }
 
 .article li
@@ -122,14 +128,33 @@ body
   color:#272c8c;
 }
 
-.blogPositive
+.blogPositive a
 {
-  background-color:#cfea2b;
+    padding-left:5px;
 }
 
-.blogNegative
+.blogPositive h4
 {
-  background-color:#fd5308;
+/*  color:#F0E88E;*/
+  color:#ffffff;
+  font-weight:bold;
+  background-color:#608913;
+  margin-left:15px;
+}
+
+
+.blogNegative a
+{
+/*  background-color:#DB1818;*/
+    padding-left:5px;
+}
+
+.blogNegative h4
+{
+  color:#ffffff;
+  font-weight:bold;
+  background-color:#DB1818;
+  margin-left:15px;
 }
 
 .blogNeutral
