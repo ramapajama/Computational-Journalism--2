@@ -9,16 +9,17 @@ import com.aliasi.lm.*;
 import com.aliasi.util.*;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
 public class Processor {
 	private Vector<Article> articles = null;
-	private File articleDir = null;
-	private File[] articleFiles = null;
+	private File articlesDir = null;
 	private static int ARTICLE_TITLE = 2;
 	private static int ARTICLE_AUTHOR = 3;
 	private static int ARTICLE_HOOK = 5;
@@ -41,6 +42,8 @@ public class Processor {
 				retval += readLine;
 				retval += "\n";
 			}
+			
+			br.close();
 		} catch (FileNotFoundException fnfe) {
 			retval = null;
 		} catch (IOException ioe) {
@@ -50,22 +53,41 @@ public class Processor {
 		return retval;
 	}
 	
-	private void initalizeArticles (String articleDirName) {
-		System.out.println(articleDirName);
-		articleDir = new File(articleDirName);
-		System.err.println(articleDir.isDirectory());
-		articleFiles = articleDir.listFiles();
+	private void initalizeArticles (String articlesDirName) {
+		System.out.println(articlesDirName);
+		articlesDir = new File(articlesDirName);
+		System.err.println(articlesDir.isDirectory());
+		File[] articleDirs = articlesDir.listFiles();
 		
-		if (articleFiles != null) {
-			for (int i = 0; i < articleFiles.length; i++) {
-				String articleText = this.fileReader(articleFiles[i]);
-			
-				if (articleText != null) {
-					String[] sentences = articleText.split("\n");
+		if (articleDirs != null) {
+			for (int dirIndex = 0; dirIndex < articleDirs.length; dirIndex++) {
+				File[] articleFiles = articleDirs[dirIndex].listFiles();
 				
-					if (sentences.length > 5) {
-						Article articleToCreate = new Article(sentences[ARTICLE_TITLE], sentences[ARTICLE_AUTHOR], sentences[ARTICLE_URL], sentences[ARTICLE_HOOK], sentences[ARTICLE_DATE], articleFiles[i].getName(), articleFiles[i]);
-						articles.add(articleToCreate);
+				if (articleFiles != null) {
+					Article mainArticle = null;
+					Vector<BasicArticle> blogs = new Vector<BasicArticle>();
+					
+					for (int i = 0; i < articleFiles.length; i++) {
+						String articleText = this.fileReader(articleFiles[i]);
+						
+						if (articleText != null) {
+							String[] sentences = articleText.split("\n");
+						
+							if (sentences.length > 5) {
+								if (articleFiles[i].getName().contains("HEADLINE")) {
+									mainArticle = new Article(sentences[ARTICLE_TITLE], sentences[ARTICLE_AUTHOR], sentences[ARTICLE_URL], sentences[ARTICLE_HOOK], sentences[ARTICLE_DATE], articleFiles[i].getName(), articleFiles[i]);
+									articles.add(mainArticle);
+								} else {
+									blogs.add(new BasicArticle(sentences[ARTICLE_TITLE], sentences[ARTICLE_AUTHOR], sentences[ARTICLE_URL], articleFiles[i]));
+								}
+							}
+						}
+					}
+					
+					if (mainArticle != null) {
+						for (int j = 0; j < blogs.size(); j++) {
+							mainArticle.addBlog(blogs.get(j));
+						}
 					}
 				}
 			}
@@ -78,6 +100,55 @@ public class Processor {
 	private void printArticles () {
 		for (int i = 0; i < articles.size(); i++) {
 			System.out.print(articles.get(i).printArticleDetails());
+		}
+	}
+	
+	private String generateHTML () {
+		String retval = "";
+		
+		//Header code
+		retval += "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n";
+		retval += "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n";
+		retval += "<head><title>At a Glance</title>\n";
+		retval += "<style type=\"text/css\" media=\"all\">\n";
+		retval += "@import \"main.css\";\n";
+		retval += "@import \"home.css\";\n";
+		retval += "</style>\n";
+		retval += "</head>\n";
+		retval += "<body>\n";
+		retval += "<div class=\"container\">\n";
+		retval += "<div class=\"header\">\n";
+		retval += "<h1>New York Times</h1>\n";
+		retval += "<h2>Headlines RSS Feed</h2>\n";
+		retval += "</div>\n";
+		retval += "<div class=\"content\">\n";
+		retval += "<h1>Headlines</h1>\n";
+		
+		//Article code
+		for (int i = 0; i < this.articles.size(); i++) {
+			retval += this.articles.get(i).printArticleHTML();
+			retval += "\n";
+		}
+		
+		//Footer code
+		retval += "</div><!--content-->\n";
+		retval += "<div class=\"footer\"/>\n";
+		retval += " </div><!--container-->\n";
+		retval += "</body>\n";
+		
+		return retval;
+	}
+	
+	private void printArticlesToHTML (String htmlText) {
+		File resultingHTML = new File("output.html");
+		BufferedWriter bw = null;
+		
+		try {
+			bw = new BufferedWriter(new FileWriter(resultingHTML));
+			bw.write(htmlText);
+			bw.close();
+		} catch (IOException ioe) {
+			System.err.println("Cannot write to output file");
 		}
 	}
 	
@@ -104,16 +175,27 @@ public class Processor {
 		}
 	}
 	
+	private String calculatePolarity (BasicArticle articleToProcess) {
+		String articleText = this.fileReader(articleToProcess.getArticleFile());
+		Classification classification = this.polarityClassifier.classify(articleText);
+		
+		return classification.bestCategory();
+	}
+	
 	private void evaluateArticlePolarity () {
 		Article currentArticle = null;
+		BasicArticle currentBlog = null;
 		
 		for (int i = 0; i < articles.size(); i++) {
 			currentArticle = articles.get(i);
 			
-			String review = this.fileReader(currentArticle.getArticleFile());
-			Classification classification = polarityClassifier.classify(review);
-			String resultCategory = classification.bestCategory();
-			currentArticle.setArticlePolarity(resultCategory);
+			currentArticle.setArticlePolarity(this.calculatePolarity(currentArticle));
+			
+			for (int j = 0; j < currentArticle.getBlogs().size(); j++) {
+				currentBlog = currentArticle.getBlogs().get(j);
+				
+				currentBlog.setArticlePolarity(this.calculatePolarity(currentBlog));
+			}
 		}
 	}
 	
@@ -183,6 +265,6 @@ public class Processor {
 		p.initalizeArticles(args[2]);
 		p.evaluateArticlePolarity();
 		p.extractArticleEntities(args[1]);
-		p.printArticles();
+		p.printArticlesToHTML(p.generateHTML());
 	}
 }
