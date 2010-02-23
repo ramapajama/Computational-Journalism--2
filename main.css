@@ -16,12 +16,20 @@ body
 	font-size: 62.5%; /*  Sets 1em to 10px */
 	font-family: "Helvetica Neue", Helvetica, "Frutiger", "Univers" Arial, Verdana, sans-serif;
 	line-height:1.8em;
-	border:1px solid;
 }
 
-.header h3
+.header h1
 {
   color: #ffffff;
+  font-size:2.5em;
+  display:inline;
+}
+.header h2
+{
+  color: #ffffff;
+  font-weight:normal;
+  padding-left:10px;
+  display:inline;
 }
 
 .container
@@ -43,11 +51,11 @@ body
 
 .header
 {
-  height: 65px;
-  width: 900px;
-  background: #0c1440;
+  width: 700px;
+  background: #000000;
   background-repeat: no-repeat;
   margin: 15px 0;
+  padding-top:35px;
 }
 
 .article
