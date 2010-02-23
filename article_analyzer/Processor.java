@@ -54,9 +54,9 @@ public class Processor {
 	}
 	
 	private void initalizeArticles (String articlesDirName) {
-		System.out.println(articlesDirName);
+		System.out.println("Extracting article information");
+		
 		articlesDir = new File(articlesDirName);
-		System.err.println(articlesDir.isDirectory());
 		File[] articleDirs = articlesDir.listFiles();
 		
 		if (articleDirs != null) {
@@ -140,7 +140,9 @@ public class Processor {
 	}
 	
 	private void printArticlesToHTML (String htmlText) {
-		File resultingHTML = new File("output.html");
+		System.out.println("Generating index.html");
+		
+		File resultingHTML = new File("index.html");
 		BufferedWriter bw = null;
 		
 		try {
@@ -159,15 +161,17 @@ public class Processor {
 		int nGram = 8;
 		polarityClassifier = DynamicLMClassifier.createNGramProcess(polarityCategories, nGram);
 		
+		System.out.println("Training polarity classifier");
+		
 		for (int i = 0; i < polarityCategories.length; i++) {
 			String category = polarityCategories[i];
 			File categoryDir = new File(trainingFiles, category);
 			File[] filesToTrain = categoryDir.listFiles();
-				
+			
 			for (int j = 0; j < filesToTrain.length; j++) {
 				File fileToTrain = filesToTrain[j];
 				String review = this.fileReader(fileToTrain);
-				System.out.printf("Training file: %s\n", fileToTrain.getName());
+				
 				if (review != null) {
 					polarityClassifier.train(category, review);
 				}
@@ -183,6 +187,8 @@ public class Processor {
 	}
 	
 	private void evaluateArticlePolarity () {
+		System.out.println("Evaluating article polarity");
+		
 		Article currentArticle = null;
 		BasicArticle currentBlog = null;
 		
@@ -211,6 +217,8 @@ public class Processor {
 	}
 	
 	private void extractArticleEntities (String serializedObject) {
+		System.out.println("Extracting article keywords");
+		
 		Article currentArticle = null;
 		Chunker entityChunker = null;
 		File serializedFile = new File(serializedObject);
@@ -256,7 +264,7 @@ public class Processor {
 	/**
 	 * Main method
 	 * 
-	 * @param args arg[0] is the polarity training directory, arg[1] is the article directory
+	 * @param args arg[0] is the polarity training directory, arg[1] is the entity extractor, arg[2] is the article directory
 	 */
 	public static void main (String[] args) {
 		Processor p = new Processor();
@@ -266,5 +274,7 @@ public class Processor {
 		p.evaluateArticlePolarity();
 		p.extractArticleEntities(args[1]);
 		p.printArticlesToHTML(p.generateHTML());
+		
+		System.out.println("Finished");
 	}
 }
